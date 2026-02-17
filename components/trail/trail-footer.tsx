@@ -51,7 +51,7 @@ export function TrailFooter() {
         <h2 className="mb-4 text-2xl font-bold text-sunlight md:text-3xl">
           Thanks for Wandering
         </h2>
-        <p className="mx-auto mb-8 max-w-md text-muted-foreground leading-relaxed">
+        <p className="mx-auto mb-8 max-w-md text-mist/90 leading-relaxed text-shadow-body">
           The best trails are shared with good company. Let's connect and explore what we can build together.
         </p>
 

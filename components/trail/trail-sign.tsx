@@ -73,7 +73,7 @@ export function TrailSign({ title, description, href, direction, icon, delay = 0
                 </h3>
                 <ArrowRight className={`h-4 w-4 text-muted-foreground group-hover:text-accent transition-all duration-300 group-hover:translate-x-1 ${direction === "left" ? "rotate-180 group-hover:-translate-x-1" : ""}`} />
               </div>
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-mist/90 leading-relaxed text-sm md:text-base text-shadow-body">
                 {description}
               </p>
             </div>

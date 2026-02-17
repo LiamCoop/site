@@ -188,7 +188,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .text-shadow-body {
-  text-shadow: 0 1px 10px oklch(0.08 0.02 145 / 0.7);
+  text-shadow:
+    0 1px 12px oklch(0.05 0.02 145 / 0.9),
+    0 2px 30px oklch(0.05 0.02 145 / 0.7);
 }
 
 /* Leaf float */

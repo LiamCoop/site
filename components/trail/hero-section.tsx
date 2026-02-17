@@ -58,14 +58,14 @@ export function HeroSection() {
           <h1 className="mb-4 text-5xl font-bold tracking-tight text-sunlight md:text-7xl lg:text-8xl text-balance text-shadow-hero">
             Into the Woods
           </h1>
-          <p className="mx-auto max-w-lg text-lg text-mist/80 md:text-xl leading-relaxed text-shadow-body">
+          <p className="mx-auto max-w-lg text-lg text-mist md:text-xl leading-relaxed text-shadow-body">
             Step off the beaten path. Wander through my work, my words, and the trails I've traveled.
           </p>
 
           {/* Scroll indicator */}
           <div className="mt-16 flex flex-col items-center gap-2">
-            <span className="text-sm tracking-widest uppercase text-mist/70 text-shadow-body">Begin the trail</span>
-            <ChevronDown className="h-5 w-5 text-mist/70 animate-bounce" />
+            <span className="text-sm tracking-widest uppercase text-mist/90 text-shadow-body">Begin the trail</span>
+            <ChevronDown className="h-5 w-5 text-mist/90 animate-bounce" />
           </div>
         </div>
       </div>

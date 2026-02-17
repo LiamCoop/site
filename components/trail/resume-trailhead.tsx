@@ -54,7 +54,7 @@ export function ResumeTrailhead() {
                 The Journey So Far
               </p>
               <div className="mx-auto mb-6 h-px w-24 bg-gradient-to-r from-transparent via-wood-light to-transparent" />
-              <p className="mx-auto max-w-md text-muted-foreground leading-relaxed mb-8">
+              <p className="mx-auto max-w-md text-mist/90 leading-relaxed mb-8 text-shadow-body">
                 Every trail has a logbook. Here's mine — the paths I've walked, the skills I've gathered, and the milestones along the way.
               </p>
 

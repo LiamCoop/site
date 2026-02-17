@@ -37,7 +37,7 @@ export function AboutSection() {
         Welcome, Traveler
       </h2>
 
-      <div className="space-y-4 text-muted-foreground leading-relaxed">
+      <div className="space-y-4 text-mist/90 leading-relaxed text-shadow-body">
         <p>
           I'm a developer who builds things with care and curiosity. Like a trail through old-growth forest, my work follows the natural contours of each problem — finding the simplest, most elegant path forward.
         </p>

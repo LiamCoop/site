@@ -57,11 +57,11 @@ export function TrailContent() {
           reverse
         >
           <div className="text-right">
-            <p className="text-xs tracking-[0.3em] uppercase text-wood-light/50 mb-4">Deeper into the woods</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-wood-light mb-4 text-shadow-body">Deeper into the woods</p>
             <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl text-balance">
               The path grows quieter here
             </h2>
-            <p className="text-muted-foreground leading-relaxed max-w-md ml-auto">
+            <p className="text-mist/90 leading-relaxed max-w-md ml-auto text-shadow-body">
               Past the familiar clearings, where the canopy thickens and the light turns golden — this is where the real thinking happens.
             </p>
           </div>
@@ -101,7 +101,7 @@ export function TrailContent() {
             <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl text-balance">
               You've come a long way
             </h2>
-            <p className="text-muted-foreground leading-relaxed max-w-md">
+            <p className="text-mist/90 leading-relaxed max-w-md text-shadow-body">
               Take a moment. Rest on the mossy log. The trailhead register is just ahead — a record of everywhere I've been and everything I've learned.
             </p>
           </div>
@@ -149,7 +149,7 @@ function SectionHeader({
         <span className="text-xs tracking-[0.3em] uppercase text-accent/70">{label}</span>
       </div>
       <h2 className="mb-3 text-3xl font-bold text-sunlight md:text-4xl">{title}</h2>
-      <p className="mx-auto max-w-md text-muted-foreground leading-relaxed">{description}</p>
+      <p className="mx-auto max-w-md text-mist/90 leading-relaxed text-shadow-body">{description}</p>
     </div>
   )
 }
