@@ -23,23 +23,22 @@ export function BoardwalkSection({ imageSrc, imageAlt, children, reverse = false
 
   return (
     <section className="parallax-section relative min-h-[70vh] w-full bg-background">
-      {/* Background with parallax */}
-      <div
-        className="absolute inset-0"
-        style={{
-          transform: mounted ? `translateY(${(scrollY - 600) * 0.15}px)` : "none",
-        }}
-      >
+      {/* Background with parallax via object-position so container always fills edge-to-edge */}
+      <div className="absolute -inset-px">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
           className="object-cover"
+          style={{
+            objectPosition: mounted ? `50% ${50 + (scrollY - 600) * 0.015}%` : "50% 50%",
+          }}
           quality={85}
+          sizes="100vw"
         />
         <div className={`absolute inset-0 ${reverse
-          ? "bg-gradient-to-l from-background/95 via-background/70 to-background/30"
-          : "bg-gradient-to-r from-background/95 via-background/70 to-background/30"
+          ? "bg-gradient-to-l from-background/90 via-background/55 to-transparent"
+          : "bg-gradient-to-r from-background/90 via-background/55 to-transparent"
         }`} />
       </div>
 

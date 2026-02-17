@@ -180,6 +180,17 @@ body::-webkit-scrollbar-thumb {
   animation: fog-drift 20s ease-in-out infinite;
 }
 
+/* Text contrast helpers for bright backgrounds */
+.text-shadow-hero {
+  text-shadow:
+    0 2px 20px oklch(0.08 0.02 145 / 0.8),
+    0 1px 4px oklch(0.08 0.02 145 / 0.55);
+}
+
+.text-shadow-body {
+  text-shadow: 0 1px 10px oklch(0.08 0.02 145 / 0.7);
+}
+
 /* Leaf float */
 @keyframes leaf-float {
   0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }

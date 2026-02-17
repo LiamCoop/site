@@ -32,7 +32,7 @@ export function HeroSection() {
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/45 to-background" />
       </div>
 
       {/* Fog overlays */}
@@ -55,17 +55,17 @@ export function HeroSection() {
             <span className="inline-block h-3 w-3 rounded-sm bg-accent" />
           </div>
 
-          <h1 className="mb-4 text-5xl font-bold tracking-tight text-sunlight md:text-7xl lg:text-8xl text-balance">
+          <h1 className="mb-4 text-5xl font-bold tracking-tight text-sunlight md:text-7xl lg:text-8xl text-balance text-shadow-hero">
             Into the Woods
           </h1>
-          <p className="mx-auto max-w-lg text-lg text-mist/80 md:text-xl leading-relaxed">
+          <p className="mx-auto max-w-lg text-lg text-mist/80 md:text-xl leading-relaxed text-shadow-body">
             Step off the beaten path. Wander through my work, my words, and the trails I've traveled.
           </p>
 
           {/* Scroll indicator */}
           <div className="mt-16 flex flex-col items-center gap-2">
-            <span className="text-sm tracking-widest uppercase text-mist/50">Begin the trail</span>
-            <ChevronDown className="h-5 w-5 text-mist/50 animate-bounce" />
+            <span className="text-sm tracking-widest uppercase text-mist/70 text-shadow-body">Begin the trail</span>
+            <ChevronDown className="h-5 w-5 text-mist/70 animate-bounce" />
           </div>
         </div>
       </div>
