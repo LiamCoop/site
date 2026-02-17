@@ -22,7 +22,7 @@ export function BoardwalkSection({ imageSrc, imageAlt, children, reverse = false
   }, [])
 
   return (
-    <section className="parallax-section relative min-h-[70vh] w-full">
+    <section className="parallax-section relative min-h-[70vh] w-full bg-background">
       {/* Background with parallax */}
       <div
         className="absolute inset-0"

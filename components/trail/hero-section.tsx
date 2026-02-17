@@ -16,10 +16,10 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-screen w-full overflow-hidden" aria-label="Welcome to the trail">
+    <section className="relative h-screen w-full" aria-label="Welcome to the trail">
       {/* Background image with parallax */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 overflow-hidden"
         style={{
           transform: mounted ? `translateY(${scrollY * 0.4}px)` : "none",
         }}
@@ -72,7 +72,7 @@ export function HeroSection() {
 
       {/* Bottom tree line silhouette */}
       <svg
-        className="absolute bottom-0 left-0 w-full text-background"
+        className="absolute -bottom-[2px] left-0 w-full text-background"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         aria-hidden="true"
