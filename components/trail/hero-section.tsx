@@ -83,7 +83,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-0 right-0 z-10 flex flex-col items-center gap-2">
+      <div className="absolute bottom-16 left-0 right-0 z-10 flex flex-col items-center gap-2">
         <span className="text-sm tracking-widest uppercase text-mist/90 text-shadow-body">Take the scenic route</span>
         <ChevronDown className="h-5 w-5 text-mist/90 animate-bounce" />
       </div>
@@ -97,7 +97,7 @@ export function HeroSection() {
       >
         <path
           fill="currentColor"
-          d="M0,120 L0,80 Q60,40 120,70 Q180,95 240,60 Q300,25 360,55 Q420,85 480,45 Q540,15 600,50 Q660,80 720,40 Q780,10 840,55 Q900,90 960,50 Q1020,20 1080,60 Q1140,90 1200,55 Q1260,30 1320,65 Q1380,95 1440,70 L1440,120 Z"
+          d="M0,120 L0,88 C120,40 240,105 360,72 C480,38 600,100 720,65 C840,30 960,98 1080,68 C1200,38 1340,95 1440,78 L1440,120 Z"
         />
       </svg>
     </section>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export function TrailFooter() {
   const ref = useRef<HTMLElement>(null)
@@ -58,10 +58,9 @@ export function TrailFooter() {
         {/* Social links as trail markers */}
         <nav className="mb-12 flex items-center justify-center gap-4" aria-label="Social links">
           {[
-            { icon: Github, label: "GitHub", href: "#" },
+            { icon: Github, label: "GitHub", href: "http://github.com/liamcoop" },
             { icon: Linkedin, label: "LinkedIn", href: "#" },
-            { icon: Twitter, label: "Twitter", href: "#" },
-            { icon: Mail, label: "Email", href: "#" },
+            { icon: Mail, label: "Email", href: "mailto:liamcoop@outlook.com" },
           ].map(({ icon: Icon, label, href }) => (
             <a
               key={label}
