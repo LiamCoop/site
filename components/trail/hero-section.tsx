@@ -59,17 +59,13 @@ export function HeroSection() {
           <h1 className="mb-2 text-5xl font-bold tracking-tight text-sunlight md:text-7xl lg:text-8xl text-balance text-shadow-hero">
             Liam Cooper
           </h1>
-          <p className="mx-auto max-w-lg text-xl font-medium text-mist md:text-2xl leading-relaxed text-shadow-body">
-            Design for seasons, not sprints
-          </p>
-
           <div className="mt-8 flex flex-col items-center gap-3">
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-md bg-sunlight px-6 py-2.5 text-base font-medium text-wood-dark transition-colors hover:bg-sunlight/80"
+                className="inline-flex items-center rounded-md bg-moss/90 px-6 py-2.5 text-base font-medium text-white transition-colors hover:bg-moss/70"
               >
                 Resume
               </Link>

@@ -44,7 +44,7 @@ export function TrailFooter() {
         {/* End of trail marker */}
         <div className="mb-8 flex items-center justify-center gap-3">
           <span className="h-px w-12 bg-gradient-to-r from-transparent to-wood-light/40" />
-          <span className="text-xs tracking-[0.3em] uppercase text-wood-light/60">End of Trail</span>
+          <span className="text-xs tracking-[0.3em] uppercase text-wood-light/60">Next Trailhead: TBD</span>
           <span className="h-px w-12 bg-gradient-to-l from-transparent to-wood-light/40" />
         </div>
 
@@ -52,14 +52,14 @@ export function TrailFooter() {
           Thanks for Wandering
         </h2>
         <p className="mx-auto mb-8 max-w-md text-mist/90 leading-relaxed text-shadow-body">
-          The best trails are shared with good company. I'm always up for interesting conversations — about code, systems, teaching, or what's worth building next.
+          The best trails are shared with good company. I'm always up for interesting conversations — about code, systems, teaching, or what's worth building next — especially if you're looking for a trail companion on something meaningful.
         </p>
 
         {/* Social links as trail markers */}
         <nav className="mb-12 flex items-center justify-center gap-4" aria-label="Social links">
           {[
-            { icon: Github, label: "GitHub", href: "http://github.com/liamcoop" },
-            { icon: Linkedin, label: "LinkedIn", href: "#" },
+            { icon: Github, label: "GitHub", href: "https://github.com/liamcoop" },
+            { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/liamcoop" },
             { icon: Mail, label: "Email", href: "mailto:liamcoop@outlook.com" },
           ].map(({ icon: Icon, label, href }) => (
             <a

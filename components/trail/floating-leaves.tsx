@@ -30,7 +30,7 @@ export function FloatingLeaves() {
   if (leaves.length === 0) return null
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+    <div className="pointer-events-none fixed inset-0 z-[1] overflow-hidden" aria-hidden="true">
       {leaves.map((leaf) => (
         <div
           key={leaf.id}

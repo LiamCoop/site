@@ -8,7 +8,6 @@ import { BoardwalkSection } from "./boardwalk-section"
 import { TrailSign } from "./trail-sign"
 import { TrailPath } from "./trail-path"
 import { TrailFooter } from "./trail-footer"
-import { FloatingLeaves } from "./floating-leaves"
 import { AboutSection } from "./about-section"
 import { ProjectCard } from "./project-card"
 import { ResumeTrailhead } from "./resume-trailhead"
@@ -16,8 +15,6 @@ import { ResumeTrailhead } from "./resume-trailhead"
 export function TrailContent() {
   return (
     <>
-      <FloatingLeaves />
-
       {/* The trail journey */}
       <div className="relative">
         <TrailPath />

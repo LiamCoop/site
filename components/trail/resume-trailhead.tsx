@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowRight, Mountain, Map } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
 export function ResumeTrailhead() {
   const ref = useRef<HTMLDivElement>(null)
@@ -70,7 +69,7 @@ export function ResumeTrailhead() {
             </div>
 
             {/* Main sign */}
-            <Link href="/resume" className="group block">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="group block">
               <div className="relative w-full max-w-xl overflow-hidden rounded-lg border-[6px] border-wood shadow-2xl shadow-background/80 bg-gradient-to-br from-wood/95 to-wood-dark/95 backdrop-blur-md wood-texture">
                 {/* Top bar with nails */}
                 <div className="relative flex items-center justify-center gap-3 border-b-2 border-wood-dark/40 bg-wood-dark/30 px-6 py-3">
@@ -105,7 +104,7 @@ export function ResumeTrailhead() {
                 <div className="absolute bottom-3 right-4 h-2 w-2 rounded-full bg-wood-light/20 shadow-inner" />
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-wood-light/20 shadow-inner" />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
 
