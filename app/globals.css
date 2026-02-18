@@ -112,6 +112,9 @@ html {
 body::-webkit-scrollbar {
   width: 6px;
 }
+body::-webkit-scrollbar:horizontal {
+  height: 0;
+}
 body::-webkit-scrollbar-track {
   background: var(--background);
 }
@@ -191,6 +194,13 @@ body::-webkit-scrollbar-thumb {
   text-shadow:
     0 1px 12px oklch(0.05 0.02 145 / 0.9),
     0 2px 30px oklch(0.05 0.02 145 / 0.7);
+}
+
+.text-shadow-strong {
+  text-shadow:
+    0 1px 4px oklch(0.05 0.02 145 / 1),
+    0 2px 12px oklch(0.05 0.02 145 / 0.95),
+    0 4px 30px oklch(0.05 0.02 145 / 0.85);
 }
 
 /* Leaf float */

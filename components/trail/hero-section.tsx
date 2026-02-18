@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { ChevronDown } from "lucide-react"
 
 export function HeroSection() {
@@ -62,12 +63,29 @@ export function HeroSection() {
             Step off the beaten path. Wander through my work, my words, and the trails I've traveled.
           </p>
 
-          {/* Scroll indicator */}
-          <div className="mt-16 flex flex-col items-center gap-2">
-            <span className="text-sm tracking-widest uppercase text-mist/90 text-shadow-body">Begin the trail</span>
-            <ChevronDown className="h-5 w-5 text-mist/90 animate-bounce" />
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <span className="text-base font-semibold text-mist/90 italic text-shadow-strong">Don't feel like wandering?</span>
+            <Link
+              href="/resume"
+              className="inline-flex items-center rounded-md bg-sunlight px-4 py-1.5 text-sm font-medium text-wood-dark transition-colors hover:bg-sunlight/80"
+            >
+              Resume
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-flex items-center rounded-md bg-wood px-4 py-1.5 text-sm font-medium text-mist transition-colors hover:bg-wood/80"
+            >
+              Blog
+            </Link>
           </div>
+
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-0 right-0 z-10 flex flex-col items-center gap-2">
+        <span className="text-sm tracking-widest uppercase text-mist/90 text-shadow-body">Take the scenic route</span>
+        <ChevronDown className="h-5 w-5 text-mist/90 animate-bounce" />
       </div>
 
       {/* Bottom tree line silhouette */}

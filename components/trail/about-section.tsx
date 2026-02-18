@@ -46,18 +46,6 @@ export function AboutSection() {
         </p>
       </div>
 
-      {/* Trail marker style skills */}
-      <div className="mt-8 flex flex-wrap gap-2">
-        {["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "PostgreSQL"].map((skill) => (
-          <span
-            key={skill}
-            className="inline-flex items-center rounded-md border border-wood/30 bg-canopy/20 px-3 py-1.5 text-xs font-medium text-mist/70 tracking-wide"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-
       {/* Elevation profile decoration */}
       <div className="mt-8 flex items-end gap-1 opacity-40" aria-hidden="true">
         {[3, 5, 4, 7, 6, 8, 5, 9, 7, 6, 8, 5, 4, 6, 7, 5, 3, 4, 6, 5].map((h, i) => (

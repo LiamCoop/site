@@ -97,7 +97,7 @@ export function TrailContent() {
           imageAlt="A peaceful forest clearing with warm sunlight"
         >
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-wood-light/50 mb-4">A clearing in the trees</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-wood-light mb-4 text-shadow-body">A clearing in the trees</p>
             <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl text-balance">
               You've come a long way
             </h2>
