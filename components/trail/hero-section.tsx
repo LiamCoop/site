@@ -60,7 +60,7 @@ export function HeroSection() {
             Into the Woods
           </h1>
           <p className="mx-auto max-w-lg text-lg text-mist md:text-xl leading-relaxed text-shadow-body">
-            Step off the beaten path. Wander through my work, my words, and the trails I've traveled.
+            Step off the beaten path. I'm Liam — a developer and tinkerer from the West Coast.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

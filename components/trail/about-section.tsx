@@ -39,10 +39,10 @@ export function AboutSection() {
 
       <div className="space-y-4 text-mist/90 leading-relaxed text-shadow-body">
         <p>
-          I'm a developer who builds things with care and curiosity. Like a trail through old-growth forest, my work follows the natural contours of each problem — finding the simplest, most elegant path forward.
+          I'm Liam — a software engineer from the West Coast who started out designing circuits and ended up building distributed systems. I love the craft of making things: clean code, elegant architecture, systems that hold up under pressure.
         </p>
         <p>
-          This is my corner of the woods. A quiet place to share the projects I've built, the ideas I've turned over, and the experiences that have shaped my craft.
+          This is my corner of the woods. A place to share the projects I've built, the things I've been learning, and the ideas I want to pass on. I care a lot about helping people grow — whether that's through mentoring, writing, or just building things worth studying.
         </p>
       </div>
 

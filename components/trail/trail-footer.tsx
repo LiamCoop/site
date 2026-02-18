@@ -52,7 +52,7 @@ export function TrailFooter() {
           Thanks for Wandering
         </h2>
         <p className="mx-auto mb-8 max-w-md text-mist/90 leading-relaxed text-shadow-body">
-          The best trails are shared with good company. Let's connect and explore what we can build together.
+          The best trails are shared with good company. I'm always up for interesting conversations — about code, systems, teaching, or what's worth building next.
         </p>
 
         {/* Social links as trail markers */}

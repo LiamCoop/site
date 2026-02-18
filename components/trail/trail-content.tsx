@@ -39,7 +39,7 @@ export function TrailContent() {
             <div className="mt-12 space-y-8">
               <TrailSign
                 title="Projects"
-                description="Wander through the things I've built — web apps, open source tools, and creative experiments crafted in the quiet of the woods."
+                description="Things I've built to learn, to solve real problems, or just because it seemed interesting — Go backends, tracing systems, and more."
                 href="/projects"
                 direction="right"
                 icon={<FolderGit2 className="h-6 w-6" />}
@@ -61,7 +61,7 @@ export function TrailContent() {
               The path grows quieter here
             </h2>
             <p className="text-mist/90 leading-relaxed max-w-md ml-auto text-shadow-body">
-              Past the familiar clearings, where the canopy thickens and the light turns golden — this is where the real thinking happens.
+              Past the familiar clearings — where I'm either deep in a problem or trying to explain one clearly to someone else. Both teach you something.
             </p>
           </div>
         </BoardwalkSection>
