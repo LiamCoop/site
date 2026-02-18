@@ -7,9 +7,9 @@ const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: 'Into the Woods | Portfolio',
+  title: 'Liam Cooper | Portfolio',
   description: 'A retreat into the woods. Explore projects, writings, and more along the trail.',
-  generator: 'v0.app',
+  generator: '',
   icons: {
     icon: [
       {

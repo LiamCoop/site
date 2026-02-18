@@ -2,13 +2,15 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { FolderGit2, BookOpen, ScrollText } from "lucide-react"
+import { FolderGit2, BookOpen } from "lucide-react"
 import { BoardwalkSection } from "./boardwalk-section"
 import { TrailSign } from "./trail-sign"
 import { TrailPath } from "./trail-path"
 import { TrailFooter } from "./trail-footer"
 import { FloatingLeaves } from "./floating-leaves"
 import { AboutSection } from "./about-section"
+import { ProjectCard } from "./project-card"
+import { ResumeTrailhead } from "./resume-trailhead"
 
 export function TrailContent() {
   return (
@@ -46,20 +48,27 @@ export function TrailContent() {
               </p>
             </div>
             <div className="space-y-8">
-              <TrailSign
-                title="Projects"
-                description="Things I've built to learn, to solve real problems, or just because it seemed interesting — Go backends, tracing systems, and more."
-                href="/projects"
+              <ProjectCard
+                title="Rules Engine"
+                subtitle="Evaluates complex user-defined schemas and rules"
+                bullets={[
+                  "Designed a stateless, horizontally scalable rule engine evaluating dynamic user-defined schemas via Common Expression Language",
+                  "Achieved ~7k RPS per instance under sustained load (10-minute test, ~4M evaluations)",
+                  "Identified and analyzed saturation behavior at tail latencies (p95 ~2.8s under peak load)",
+                ]}
+                tech={["Go", "PostgreSQL"]}
                 direction="right"
-                icon={<FolderGit2 className="h-6 w-6" />}
                 delay={0}
               />
-              <TrailSign
-                title="Placeholder Project"
-                description="Placeholder description for a future project."
-                href="/projects"
+              <ProjectCard
+                title="Distrace"
+                subtitle="Distributed tracing backend for OpenTelemetry"
+                bullets={[
+                  "Correlates out-of-order spans across services using TraceID grouping and parent–child resolution",
+                  "Implements bounded trace completion with inactivity and max-age limits (30s / 5m) to balance completeness with memory constraints",
+                ]}
+                tech={["Go", "Kafka", "OpenTelemetry"]}
                 direction="left"
-                icon={<FolderGit2 className="h-6 w-6" />}
                 delay={200}
               />
             </div>
@@ -83,15 +92,8 @@ export function TrailContent() {
               title="Resume"
               description="The full map of the journey."
             />
-            <div className="mt-12 space-y-8">
-              <TrailSign
-                title="Resume"
-                description="The full trail log — every summit, switchback, and campsite from the journey so far."
-                href="/resume"
-                direction="right"
-                icon={<ScrollText className="h-6 w-6" />}
-                delay={0}
-              />
+            <div className="mt-12">
+              <ResumeTrailhead />
             </div>
           </div>
         </section>
@@ -186,7 +188,7 @@ function BlogSection() {
             title="Agentic Development Notes"
             description="Placeholder description for this post."
             href="/blog/agentic-development-notes"
-            direction="right"
+            direction="left"
             icon={<BookOpen className="h-6 w-6" />}
             delay={100}
           />
@@ -194,7 +196,7 @@ function BlogSection() {
             title="Dotfiles"
             description="Quick writeup on how I'm using GNU stow with git to store my dev configuration to easily share, update, and setup new machines."
             href="/blog/dotfiles"
-            direction="left"
+            direction="right"
             icon={<BookOpen className="h-6 w-6" />}
             delay={300}
           />
