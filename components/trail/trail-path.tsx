@@ -18,12 +18,13 @@ export function TrailPath() {
   useEffect(() => {
     const handleScroll = () => {
       if (!svgRef.current || !pathLength) return
-      const scrollY = window.scrollY
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight
-      // Start filling as soon as the SVG enters the viewport
-      const scrollProgress = Math.max(0, Math.min(1, scrollY / maxScroll))
-      const easedProgress = Math.pow(scrollProgress, 0.7)
-      setDrawLength(easedProgress * pathLength)
+      const rect = svgRef.current.getBoundingClientRect()
+      // Use the viewport center as the reference point so the path stays
+      // roughly in step with where the user is on the page
+      const viewportCenter = window.innerHeight * 0.7
+      const scrolledIntoContainer = viewportCenter - rect.top
+      const progress = Math.max(0, Math.min(1, scrolledIntoContainer / rect.height))
+      setDrawLength(progress * pathLength)
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true })

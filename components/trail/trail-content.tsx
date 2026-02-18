@@ -1,9 +1,8 @@
 "use client"
 
-import { FolderGit2, BookOpen, Compass } from "lucide-react"
+import { FolderGit2, BookOpen, ScrollText } from "lucide-react"
 import { BoardwalkSection } from "./boardwalk-section"
 import { TrailSign } from "./trail-sign"
-import { ResumeTrailhead } from "./resume-trailhead"
 import { TrailPath } from "./trail-path"
 import { TrailFooter } from "./trail-footer"
 import { FloatingLeaves } from "./floating-leaves"
@@ -102,7 +101,7 @@ export function TrailContent() {
               You've come a long way
             </h2>
             <p className="text-mist/90 leading-relaxed max-w-md text-shadow-body">
-              Take a moment. Rest on the mossy log. The trailhead register is just ahead — a record of everywhere I've been and everything I've learned.
+              Take a moment. Rest on the mossy log. The trailhead is just ahead.
             </p>
           </div>
         </BoardwalkSection>
@@ -110,17 +109,23 @@ export function TrailContent() {
         {/* Trail divider */}
         <TrailDivider />
 
-        {/* SECTION 4 — The big trailhead sign: Resume */}
-        <section className="relative py-20 md:py-32" aria-label="Resume trailhead">
+        {/* SECTION 4 — Trail sign: Resume */}
+        <section className="relative py-20 md:py-32" aria-label="Resume">
           <div className="mx-auto max-w-5xl px-6">
             <SectionHeader
               label="Trailhead"
               title="Resume"
               description="The full map of the journey."
-              icon={<Compass className="h-5 w-5 text-accent" />}
             />
-            <div className="mt-12">
-              <ResumeTrailhead />
+            <div className="mt-12 space-y-8">
+              <TrailSign
+                title="Resume"
+                description="The full trail log — every summit, switchback, and campsite from the journey so far."
+                href="/resume"
+                direction="right"
+                icon={<ScrollText className="h-6 w-6" />}
+                delay={0}
+              />
             </div>
           </div>
         </section>
