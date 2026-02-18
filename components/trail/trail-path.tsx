@@ -21,10 +21,9 @@ export function TrailPath() {
       const scrollY = window.scrollY
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
       // Start filling as soon as the SVG enters the viewport
-      const svgAbsTop = svgRef.current.getBoundingClientRect().top + scrollY
-      const startScroll = Math.max(0, svgAbsTop - window.innerHeight)
-      const scrollProgress = Math.max(0, Math.min(1, (scrollY - startScroll) / (maxScroll - startScroll)))
-      setDrawLength(scrollProgress * pathLength)
+      const scrollProgress = Math.max(0, Math.min(1, scrollY / maxScroll))
+      const easedProgress = Math.pow(scrollProgress, 0.7)
+      setDrawLength(easedProgress * pathLength)
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true })
