@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { FolderGit2, BookOpen } from "lucide-react"
+import Link from "next/link"
+import { FolderGit2, BookOpen, Compass } from "lucide-react"
 import { BoardwalkSection } from "./boardwalk-section"
 import { TrailSign } from "./trail-sign"
 import { TrailPath } from "./trail-path"
@@ -40,9 +41,11 @@ export function TrailContent() {
                 <FolderGit2 className="h-4 w-4 text-accent/70" />
                 <span className="text-xs tracking-[0.3em] uppercase text-accent/70">Vista</span>
               </div>
-              <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl lg:text-5xl text-balance">
-                Projects
-              </h2>
+              <Link href="/projects" className="group inline-block underline decoration-sunlight/40 underline-offset-4 hover:decoration-accent transition-all duration-200">
+                <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl lg:text-5xl text-balance transition-colors duration-200 group-hover:text-accent">
+                  Projects
+                </h2>
+              </Link>
               <p className="text-mist/90 leading-relaxed max-w-md text-shadow-body">
                 Each project is a path I've explored — some winding, some steep, all worth the journey.
               </p>
@@ -84,17 +87,18 @@ export function TrailContent() {
         {/* Trail divider */}
         <TrailDivider />
 
-        {/* SECTION 4 — Trail sign: Resume */}
-        <section className="relative py-20 md:py-32" aria-label="Resume">
-          <div className="mx-auto max-w-5xl px-6">
+        {/* SECTION 4 — The summit: Resume */}
+        <section className="relative pt-20 md:pt-32 pb-8" aria-label="Resume trailhead">
+          <div className="mx-auto max-w-5xl px-6 mb-16">
             <SectionHeader
-              label="Summit"
+              label="The Summit"
               title="Resume"
-              description="The full map of the journey."
+              description="You've reached the peak. The full map of the journey lies ahead."
+              icon={<Compass className="h-5 w-5 text-accent" />}
             />
-            <div className="mt-12">
-              <ResumeTrailhead />
-            </div>
+          </div>
+          <div className="mx-auto max-w-6xl px-4">
+            <ResumeTrailhead />
           </div>
         </section>
       </div>
@@ -174,9 +178,11 @@ function BlogSection() {
             <BookOpen className="h-4 w-4 text-accent/70" />
             <span className="text-xs tracking-[0.3em] uppercase text-accent/70">Meadow</span>
           </div>
-          <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl lg:text-5xl text-balance">
-            Blog
-          </h2>
+          <Link href="/blog" className="group inline-block underline decoration-sunlight/40 underline-offset-4 hover:decoration-accent transition-all duration-200">
+            <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl lg:text-5xl text-balance transition-colors duration-200 group-hover:text-accent">
+              Blog
+            </h2>
+          </Link>
           <p className="text-mist/90 leading-relaxed text-shadow-body">
             Field notes and reflections gathered along the trail — thoughts on craft, technology, and the slow art of building things that matter.
           </p>
