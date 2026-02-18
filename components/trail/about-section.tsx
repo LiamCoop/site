@@ -42,7 +42,7 @@ export function AboutSection() {
           I'm Liam — a software engineer from the West Coast who started out designing circuits and ended up building distributed systems. I love the craft of making things: clean code, elegant architecture, systems that hold up under pressure.
         </p>
         <p>
-          This is my corner of the woods. A place to share the projects I've built, the things I've been learning, and the ideas I want to pass on. I care a lot about helping people grow — whether that's through mentoring, writing, or just building things worth studying.
+          This is my corner of the woods. A place to share the projects I've built, the things I've been learning, and the ideas I want to pass on. I care a lot about helping people grow. Whether that's through mentoring, writing, or just building things worth studying.
         </p>
       </div>
 

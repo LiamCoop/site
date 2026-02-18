@@ -29,7 +29,7 @@ export function ResumeTrailhead() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >
-      <Link href="/resume" className="group block">
+      <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="group block">
         <div className="relative overflow-hidden rounded-xl border-2 border-wood bg-card wood-texture transition-all duration-300 group-hover:border-accent group-hover:shadow-lg group-hover:shadow-accent/10">
           {/* Nail details */}
           <div className="absolute top-3 left-3 h-2 w-2 rounded-full bg-wood-light/40" />

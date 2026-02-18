@@ -56,27 +56,30 @@ export function HeroSection() {
             <span className="inline-block h-3 w-3 rounded-sm bg-accent" />
           </div>
 
-          <h1 className="mb-4 text-5xl font-bold tracking-tight text-sunlight md:text-7xl lg:text-8xl text-balance text-shadow-hero">
-            Into the Woods
+          <h1 className="mb-2 text-5xl font-bold tracking-tight text-sunlight md:text-7xl lg:text-8xl text-balance text-shadow-hero">
+            Liam Cooper
           </h1>
-          <p className="mx-auto max-w-lg text-lg text-mist md:text-xl leading-relaxed text-shadow-body">
-            Step off the beaten path. I'm Liam — a developer and tinkerer from the West Coast.
+          <p className="mx-auto max-w-lg text-xl font-medium text-mist md:text-2xl leading-relaxed text-shadow-body">
+            Design for seasons, not sprints
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <span className="text-base font-semibold text-mist/90 italic text-shadow-strong">Don't feel like wandering?</span>
-            <Link
-              href="/resume"
-              className="inline-flex items-center rounded-md bg-sunlight px-4 py-1.5 text-sm font-medium text-wood-dark transition-colors hover:bg-sunlight/80"
-            >
-              Resume
-            </Link>
-            <Link
-              href="/blog"
-              className="inline-flex items-center rounded-md bg-wood px-4 py-1.5 text-sm font-medium text-mist transition-colors hover:bg-wood/80"
-            >
-              Blog
-            </Link>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-md bg-sunlight px-6 py-2.5 text-base font-medium text-wood-dark transition-colors hover:bg-sunlight/80"
+              >
+                Resume
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center rounded-md bg-wood px-6 py-2.5 text-base font-medium text-mist transition-colors hover:bg-wood/80"
+              >
+                Blog
+              </Link>
+            </div>
           </div>
 
         </div>
@@ -84,7 +87,7 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-16 left-0 right-0 z-10 flex flex-col items-center gap-2">
-        <span className="text-sm tracking-widest uppercase text-mist/90 text-shadow-body">Take the scenic route</span>
+        <span className="text-sm tracking-widest uppercase text-mist/90 text-shadow-body">Take the Scenic Route</span>
         <ChevronDown className="h-5 w-5 text-mist/90 animate-bounce" />
       </div>
 

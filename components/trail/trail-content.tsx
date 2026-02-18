@@ -32,7 +32,7 @@ export function TrailContent() {
         <section className="relative py-20 md:py-32" aria-label="Projects trail">
           <div className="mx-auto max-w-5xl px-6">
             <SectionHeader
-              label="Side Trail"
+              label="Vista"
               title="Projects"
               description="Each project is a path I've explored — some winding, some steep, all worth the journey."
             />
@@ -61,7 +61,7 @@ export function TrailContent() {
               The path grows quieter here
             </h2>
             <p className="text-mist/90 leading-relaxed max-w-md ml-auto text-shadow-body">
-              Past the familiar clearings — where I'm either deep in a problem or trying to explain one clearly to someone else. Both teach you something.
+              I've learned to trust the terminus. When I'm stuck, the answer tends to be at the end of the road, not back at the trailhead.
             </p>
           </div>
         </BoardwalkSection>
@@ -73,7 +73,7 @@ export function TrailContent() {
         <section className="relative py-20 md:py-32" aria-label="Blog trail">
           <div className="mx-auto max-w-5xl px-6">
             <SectionHeader
-              label="Scenic Overlook"
+              label="Meadow"
               title="Blog"
               description="Thoughts collected along the way — field notes from the trail."
             />
@@ -101,7 +101,7 @@ export function TrailContent() {
               You've come a long way
             </h2>
             <p className="text-mist/90 leading-relaxed max-w-md text-shadow-body">
-              Take a moment. Rest on the mossy log. The trailhead is just ahead.
+              Take a moment. Rest on the mossy log. The summit is just ahead.
             </p>
           </div>
         </BoardwalkSection>
@@ -113,7 +113,7 @@ export function TrailContent() {
         <section className="relative py-20 md:py-32" aria-label="Resume">
           <div className="mx-auto max-w-5xl px-6">
             <SectionHeader
-              label="Trailhead"
+              label="Summit"
               title="Resume"
               description="The full map of the journey."
             />
