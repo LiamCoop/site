@@ -1,5 +1,7 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import Image from "next/image"
 import { FolderGit2, BookOpen, ScrollText } from "lucide-react"
 import { BoardwalkSection } from "./boardwalk-section"
 import { TrailSign } from "./trail-sign"
@@ -28,15 +30,22 @@ export function TrailContent() {
         {/* Trail divider */}
         <TrailDivider />
 
-        {/* SECTION 2 — Trail signs: Projects */}
-        <section className="relative py-20 md:py-32" aria-label="Projects trail">
-          <div className="mx-auto max-w-5xl px-6">
-            <SectionHeader
-              label="Vista"
-              title="Projects"
-              description="Each project is a path I've explored — some winding, some steep, all worth the journey."
-            />
-            <div className="mt-12 space-y-8">
+        {/* SECTION 2 — Projects */}
+        <section className="relative py-24 md:py-40" aria-label="Projects trail">
+          <div className="mx-auto max-w-5xl px-6 space-y-12">
+            <div>
+              <div className="mb-4 flex items-center gap-2">
+                <FolderGit2 className="h-4 w-4 text-accent/70" />
+                <span className="text-xs tracking-[0.3em] uppercase text-accent/70">Vista</span>
+              </div>
+              <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl lg:text-5xl text-balance">
+                Projects
+              </h2>
+              <p className="text-mist/90 leading-relaxed max-w-md text-shadow-body">
+                Each project is a path I've explored — some winding, some steep, all worth the journey.
+              </p>
+            </div>
+            <div className="space-y-8">
               <TrailSign
                 title="Projects"
                 description="Things I've built to learn, to solve real problems, or just because it seemed interesting — Go backends, tracing systems, and more."
@@ -45,66 +54,23 @@ export function TrailContent() {
                 icon={<FolderGit2 className="h-6 w-6" />}
                 delay={0}
               />
-            </div>
-          </div>
-        </section>
-
-        {/* Forest depth transition */}
-        <BoardwalkSection
-          imageSrc="/images/deep-forest.jpg"
-          imageAlt="Deep forest trail with towering old-growth trees"
-          reverse
-        >
-          <div className="text-right">
-            <p className="text-xs tracking-[0.3em] uppercase text-wood-light mb-4 text-shadow-body">Deeper into the woods</p>
-            <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl text-balance">
-              The path grows quieter here
-            </h2>
-            <p className="text-mist/90 leading-relaxed max-w-md ml-auto text-shadow-body">
-              I've learned to trust the terminus. When I'm stuck, the answer tends to be at the end of the road, not back at the trailhead.
-            </p>
-          </div>
-        </BoardwalkSection>
-
-        {/* Trail divider */}
-        <TrailDivider />
-
-        {/* SECTION 3 — Trail signs: Blog */}
-        <section className="relative py-20 md:py-32" aria-label="Blog trail">
-          <div className="mx-auto max-w-5xl px-6">
-            <SectionHeader
-              label="Meadow"
-              title="Blog"
-              description="Thoughts collected along the way — field notes from the trail."
-            />
-            <div className="mt-12 space-y-8">
               <TrailSign
-                title="Blog"
-                description="Field notes and reflections gathered along the trail — thoughts on craft, technology, and the slow art of building things that matter."
-                href="/blog"
+                title="Placeholder Project"
+                description="Placeholder description for a future project."
+                href="/projects"
                 direction="left"
-                icon={<BookOpen className="h-6 w-6" />}
-                delay={0}
+                icon={<FolderGit2 className="h-6 w-6" />}
+                delay={200}
               />
             </div>
           </div>
         </section>
 
-        {/* Forest clearing transition */}
-        <BoardwalkSection
-          imageSrc="/images/forest-clearing.jpg"
-          imageAlt="A peaceful forest clearing with warm sunlight"
-        >
-          <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-wood-light mb-4 text-shadow-body">A clearing in the trees</p>
-            <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl text-balance">
-              You've come a long way
-            </h2>
-            <p className="text-mist/90 leading-relaxed max-w-md text-shadow-body">
-              Take a moment. Rest on the mossy log. The summit is just ahead.
-            </p>
-          </div>
-        </BoardwalkSection>
+        {/* Trail divider */}
+        <TrailDivider />
+
+        {/* SECTION 3 — Blog on image */}
+        <BlogSection />
 
         {/* Trail divider */}
         <TrailDivider />
@@ -156,6 +122,85 @@ function SectionHeader({
       <h2 className="mb-3 text-3xl font-bold text-sunlight md:text-4xl">{title}</h2>
       <p className="mx-auto max-w-md text-mist/90 leading-relaxed text-shadow-body">{description}</p>
     </div>
+  )
+}
+
+function BlogSection() {
+  const [scrollY, setScrollY] = useState(0)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  return (
+    <section className="relative w-full bg-background" aria-label="Blog">
+      {/* Background image with parallax */}
+      <div className="absolute -inset-px">
+        <Image
+          src="/images/forest-clearing.jpg"
+          alt="A peaceful forest clearing with warm sunlight"
+          fill
+          className="object-cover"
+          style={{
+            objectPosition: mounted ? `50% ${50 + (scrollY - 600) * 0.015}%` : "50% 50%",
+          }}
+          quality={85}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/85" />
+      </div>
+
+      {/* Boardwalk plank lines */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute left-0 right-0 h-px bg-wood/10"
+            style={{ top: `${12 + i * 12}%` }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 md:py-32">
+        {/* Mobile: stacked. Desktop: intro anchored top-left */}
+        <div className="mb-10 md:max-w-xs">
+          <div className="mb-4 flex items-center gap-2">
+            <BookOpen className="h-4 w-4 text-accent/70" />
+            <span className="text-xs tracking-[0.3em] uppercase text-accent/70">Meadow</span>
+          </div>
+          <h2 className="text-3xl font-bold text-sunlight mb-4 md:text-4xl lg:text-5xl text-balance">
+            Blog
+          </h2>
+          <p className="text-mist/90 leading-relaxed text-shadow-body">
+            Field notes and reflections gathered along the trail — thoughts on craft, technology, and the slow art of building things that matter.
+          </p>
+        </div>
+
+        {/* Trail signs: stacked on mobile, alternating on desktop */}
+        <div className="space-y-8">
+          <TrailSign
+            title="Agentic Development Notes"
+            description="Placeholder description for this post."
+            href="/blog/agentic-development-notes"
+            direction="right"
+            icon={<BookOpen className="h-6 w-6" />}
+            delay={100}
+          />
+          <TrailSign
+            title="Dotfiles"
+            description="Quick writeup on how I'm using GNU stow with git to store my dev configuration to easily share, update, and setup new machines."
+            href="/blog/dotfiles"
+            direction="left"
+            icon={<BookOpen className="h-6 w-6" />}
+            delay={300}
+          />
+        </div>
+      </div>
+    </section>
   )
 }
 
