@@ -45,5 +45,7 @@ You can find my personal config here: https://github.com/LiamCoop/config
 
 
 [1] [https://news.ycombinator.com/item?id=11070797](https://news.ycombinator.com/item?id=11070797)
+
 [2] [https://www.atlassian.com/git/tutorials/dotfiles](https://www.atlassian.com/git/tutorials/dotfiles)
+
 [3] [https://www.youtube.com/watch?v=_nG09Z_tdUU](https://www.youtube.com/watch?v=_nG09Z_tdUU)
