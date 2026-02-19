@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 
 interface ProjectCardProps {
   title: string
@@ -9,6 +10,7 @@ interface ProjectCardProps {
   tech: string[]
   direction?: "left" | "right"
   delay?: number
+  href?: string
 }
 
 export function ProjectCard({
@@ -18,6 +20,7 @@ export function ProjectCard({
   tech,
   direction = "right",
   delay = 0,
+  href,
 }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -59,7 +62,13 @@ export function ProjectCard({
               : "opacity-0 translate-x-12"
         }`}
       >
-        <div className="relative overflow-hidden rounded-lg border-2 border-wood bg-card p-6 md:p-8 wood-texture">
+        <Link
+          href={href ?? "#"}
+          target={href ? "_blank" : undefined}
+          rel={href ? "noopener noreferrer" : undefined}
+          className={href ? "block group" : "block pointer-events-none"}
+        >
+        <div className="relative overflow-hidden rounded-lg border-2 border-wood bg-card p-6 md:p-8 wood-texture group-hover:border-wood-light transition-colors duration-200">
           {/* Nail details */}
           <div className="absolute top-3 left-3 h-2 w-2 rounded-full bg-wood-light/40" />
           <div className="absolute top-3 right-3 h-2 w-2 rounded-full bg-wood-light/40" />
@@ -90,6 +99,7 @@ export function ProjectCard({
             ))}
           </div>
         </div>
+        </Link>
       </div>
     </div>
   )

@@ -59,6 +59,7 @@ export function TrailContent() {
                 tech={["Go", "PostgreSQL"]}
                 direction="right"
                 delay={0}
+                href="https://github.com/liamcoop/rules"
               />
               <ProjectCard
                 title="Distrace"
@@ -70,6 +71,7 @@ export function TrailContent() {
                 tech={["Go", "Kafka", "OpenTelemetry"]}
                 direction="left"
                 delay={200}
+                href="https://github.com/liamcoop/distrace"
               />
             </div>
           </div>
@@ -154,7 +156,7 @@ function BlogSection() {
           quality={85}
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/85" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/85 via-background/60 to-background/85" />
       </div>
 
       {/* Boardwalk plank lines */}
@@ -213,13 +215,13 @@ function TrailDivider() {
   return (
     <div className="flex items-center justify-center py-8" aria-hidden="true">
       <div className="flex items-center gap-3">
-        <span className="h-px w-16 bg-gradient-to-r from-transparent to-wood/30" />
+        <span className="h-px w-16 bg-linear-to-r from-transparent to-wood/30" />
         <div className="flex gap-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-wood/40" />
           <span className="h-1.5 w-1.5 rounded-full bg-moss/40" />
           <span className="h-1.5 w-1.5 rounded-full bg-wood/40" />
         </div>
-        <span className="h-px w-16 bg-gradient-to-l from-transparent to-wood/30" />
+        <span className="h-px w-16 bg-linear-to-l from-transparent to-wood/30" />
       </div>
     </div>
   )

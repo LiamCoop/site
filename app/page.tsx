@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <FloatingLeaves />
-      <main className="relative z-[2]">
+      <main className="relative z-2">
         <HeroSection />
         <TrailContent />
       </main>
