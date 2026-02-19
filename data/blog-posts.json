@@ -4,5 +4,11 @@
     "name": "Dotfiles",
     "date": "2026-02-18",
     "filePath": "/blog/Dotfiles.md"
+  },
+  {
+    "slug": "tests-become-tech-debt",
+    "name": "When Tests Become Technical Debt",
+    "date": "2026-02-18",
+    "filePath": "/blog/When Tests Become Technical Debt.md"
   }
 ]
