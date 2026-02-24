@@ -9,7 +9,6 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono"
 export const metadata: Metadata = {
   title: 'Liam Cooper | Portfolio',
   description: 'A retreat into the woods. Explore projects, writings, and more along the trail.',
-  generator: '',
   icons: {
     icon: [
       {
@@ -27,6 +26,7 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
+  manifest: '/manifest.json',
 }
 
 export const viewport: Viewport = {
