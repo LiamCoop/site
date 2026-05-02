@@ -62,16 +62,17 @@ export function TrailContent() {
                 href="https://github.com/liamcoop/rules"
               />
               <ProjectCard
-                title="Distrace"
-                subtitle="Distributed tracing backend for OpenTelemetry"
+                title="Collaborative Markdown Editor"
+                subtitle="Real-time multiplayer markdown editor for teams"
                 bullets={[
-                  "Correlates out-of-order spans across services using TraceID grouping and parent–child resolution",
-                  "Implements bounded trace completion with inactivity and max-age limits (30s / 5m) to balance completeness with memory constraints",
+                  "Conflict-free real-time collaboration powered by Automerge CRDTs — edits from multiple users merge automatically without data loss",
+                  "Live presence: see collaborators' cursors and active selections in real time across all connected clients",
+                  "Inline review workflow with threaded comments anchored to document positions, plus split editor/preview with KaTeX math and Mermaid diagram rendering",
+                  "Offline-friendly via IndexedDB persistence and BroadcastChannel tab-to-tab sync; SSO authentication via Microsoft Entra ID and Google",
                 ]}
-                tech={["Go", "Kafka", "OpenTelemetry"]}
+                tech={["Next.js", "TypeScript", "Automerge", "CodeMirror", "NextAuth"]}
                 direction="left"
                 delay={200}
-                href="https://github.com/liamcoop/distrace"
               />
             </div>
           </div>

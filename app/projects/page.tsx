@@ -16,16 +16,6 @@ const projects = [
     href: "https://github.com/liamcoop/rules",
   },
   {
-    title: "Distrace",
-    subtitle: "Distributed tracing backend for OpenTelemetry",
-    bullets: [
-      "Correlates out-of-order spans across services using TraceID grouping and parent–child resolution",
-      "Implements bounded trace completion with inactivity and max-age limits (30s / 5m) to balance completeness with memory constraints",
-    ],
-    tech: ["Go", "Kafka", "OpenTelemetry"],
-    href: "https://github.com/liamcoop/distrace",
-  },
-  {
     title: "Real-time Collaborative Markdown Editor",
     subtitle: "Real-time collaborative markdown editor powered by CRDTs",
     bullets: [
@@ -36,6 +26,16 @@ const projects = [
     ],
     tech: ["CRDTs", "NextJS", "Markdown"],
     href: "https://github.com/LiamCoop/md-editor",
+  },
+  {
+    title: "Distrace",
+    subtitle: "Distributed tracing backend for OpenTelemetry",
+    bullets: [
+      "Correlates out-of-order spans across services using TraceID grouping and parent–child resolution",
+      "Implements bounded trace completion with inactivity and max-age limits (30s / 5m) to balance completeness with memory constraints",
+    ],
+    tech: ["Go", "Kafka", "OpenTelemetry"],
+    href: "https://github.com/liamcoop/distrace",
   },
 ]
 
