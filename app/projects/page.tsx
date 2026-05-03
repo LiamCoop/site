@@ -28,6 +28,17 @@ const projects = [
     href: "https://github.com/LiamCoop/md-editor",
   },
   {
+    title: "Automerge Sync Daemon",
+    subtitle: "Rust CLI daemon that syncs local files with a remote Automerge document",
+    bullets: [
+      "Connects to an automerge-repo WebSocket sync server and keeps a local file in sync with a remote Automerge document",
+      "Implements the full automerge-repo handshake and CBOR-encoded message protocol",
+      "Handles ping/pong keepalive and graceful shutdown",
+    ],
+    tech: ["Rust", "Automerge", "WebSockets", "CBOR"],
+    href: "https://github.com/LiamCoop/fs-automerge-client",
+  },
+  {
     title: "Distrace",
     subtitle: "Distributed tracing backend for OpenTelemetry",
     bullets: [

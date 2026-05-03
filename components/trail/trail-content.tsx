@@ -73,6 +73,20 @@ export function TrailContent() {
                 tech={["Next.js", "TypeScript", "Automerge", "CodeMirror", "NextAuth"]}
                 direction="left"
                 delay={200}
+                href="https://github.com/LiamCoop/md-editor"
+              />
+              <ProjectCard
+                title="Automerge Sync Daemon"
+                subtitle="Rust CLI daemon that syncs local files with a remote Automerge document"
+                bullets={[
+                  "Connects to an automerge-repo WebSocket sync server and keeps a local file in sync with a remote Automerge document",
+                  "Implements the full automerge-repo handshake and CBOR-encoded message protocol",
+                  "Handles ping/pong keepalive and graceful shutdown",
+                ]}
+                tech={["Rust", "Automerge", "WebSockets", "CBOR"]}
+                direction="right"
+                delay={400}
+                href="https://github.com/LiamCoop/fs-automerge-client"
               />
             </div>
           </div>
